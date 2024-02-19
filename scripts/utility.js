@@ -49,6 +49,7 @@ document.addEventListener('keyup',function(){
 
 function closeModal(){
     let modal = document.getElementById('my_modal');
+    window.location.reload();
     modal.close();
 }
 
