@@ -51,6 +51,11 @@ document.addEventListener('keyup',function(){
         enableElement('next-btn');
 })
 
+function closeModal(){
+    let modal = document.getElementById('my_modal_5');
+    modal.close();
+}
+
 function discountCalculate() {
     let discountPrice = 0;
     const totalPriceText = document.getElementById('grand-total').innerHTML;
