@@ -3,21 +3,22 @@ const ticketPrice = 550;
 let selectedSeatArr = [];
 let totalTicketPrice = 0;
 let count = 0;
+
 for (let i = 0; i < seats.length; i++) {
     const seat = seats[i];
 
     seat.addEventListener('click', function () {
         if (selectedSeatArr.length <= 3) {
-            let availableSeat = getElementById('initial-seat');
-            availableSeat -= 1;
-            setElementById('initial-seat', availableSeat);
-
+           
             const seatNumberElement = document.getElementById(seat.id);
             const seatNumber = seatNumberElement.innerText;
             const isExists = selectedSeatArr.includes(seatNumber);
             if (!isExists) {
+                let availableSeat = getElementById('initial-seat');
+                availableSeat -= 1;
+                setElementById('initial-seat', availableSeat);
+    
                 selectedSeatArr.push(seatNumber);
-
                 totalTicketPrice += ticketPrice;
 
                 setElementById('total-price', totalTicketPrice);
@@ -52,7 +53,7 @@ for (let i = 0; i < seats.length; i++) {
                 alert('You already selected this seat.');
         }
         else
-            alert('You can not buy more than 4 tickets');
+            alert('You cannot buy more than 4 tickets');
     })
 }
 
