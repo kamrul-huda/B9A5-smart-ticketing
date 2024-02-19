@@ -8,11 +8,11 @@ for (let i = 0; i < seats.length; i++) {
     const seat = seats[i];
 
     seat.addEventListener('click', function () {
-        if (selectedSeatArr.length <= 3) {
-           
+        if (selectedSeatArr.length <= 3) {           
             const seatNumberElement = document.getElementById(seat.id);
             const seatNumber = seatNumberElement.innerText;
             const isExists = selectedSeatArr.includes(seatNumber);
+
             if (!isExists) {
                 let availableSeat = getElementById('initial-seat');
                 availableSeat -= 1;
