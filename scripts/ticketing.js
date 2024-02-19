@@ -61,7 +61,7 @@ for (let i = 0; i < seats.length; i++) {
 
 function discountCalculate() {
     let discountPrice = 0;
-    const totalPriceText = document.getElementById('grand-total').innerHTML;
+    const totalPriceText = document.getElementById('grand-total').innerText;
     const totalPrice = parseInt(totalPriceText);
     const couponCode = document.getElementById('coupon-text').value;
 
